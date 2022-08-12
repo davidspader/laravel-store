@@ -19,6 +19,9 @@
                                 <input value="{{ $product->name }}" type="text" id="name" name="name"
                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
+                            @error('name')
+                            <div class="text-red-400 text-sm">{{ $message }}</div>
+                            @endif
                         </div>
 
                         <div class="p-2 w-1/2">
@@ -27,6 +30,9 @@
                                 <input value="{{ $product->price }}" type="text" id="price" name="price"
                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
                             </div>
+                            @error('price')
+                            <div class="text-red-400 text-sm">{{ $message }}</div>
+                            @endif
                         </div>
 
                         <div class="p-2 w-1/2">
@@ -35,6 +41,9 @@
                                 <input value="{{ $product->stock }}" type="text" id="stock" name="stock"
                                        class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                             </div>
+                            @error('stock')
+                            <div class="text-red-400 text-sm">{{ $message }}</div>
+                            @endif
                         </div>
 
                         <div class="p-2 w-1/2">
@@ -59,6 +68,9 @@
                                     id="description" name="description"
                                     class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $product->description }}</textarea>
                             </div>
+                            @error('description')
+                            <div class="text-red-400 text-sm">{{ $message }}</div>
+                            @endif
                         </div>
 
                         <div class="p-2 w-full">
